@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<application port="5050">     
+    <resources>       
+
+    </resources> 
+        
+    <server protocol="HTTP" host="0.0.0.0" port="6060" root="root">      
+              
+        <services autoload="true"/>
+        
+        <filters autoload="true"/>
+
+        <rest path="/pipes" />  <!-- base指定的自定义HttpServlet子类必须标记@HttpUserType, 不设置base则视为没有当前用户信息设置  -->  
+        
+        <servlets path="/pipes" autoload="true" />
+        
+    </server>
+    
+</application>
